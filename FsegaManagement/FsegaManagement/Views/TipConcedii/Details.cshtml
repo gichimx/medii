@@ -1,0 +1,29 @@
+﻿@model TipConcediuViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalii Cerere Concediu</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZileStandard)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZileStandard)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Modifica</a> |
+    <a asp-action="Index" class="btn btn-dark">Pagina anteriora</a>
+</div>
